@@ -18,7 +18,7 @@ function fetchUserData() {
                       ${user.displayName}
                   </h1>
                   <h2 class="heading2">सक्रिय केसेस: ${user.totalConfirmed}</h2>
-                  <h2 class="heading2">रिकवर हुए केसेस: ${user.totalConfirmed}</h2>
+                  <h2 class="heading2">रिकवर हुए केसेस: ${user.totalRecovered}</h2>
                   <h2 class="heading2">जानलेवा केसेस: ${user.totalDeaths}</h2>
                   <p class="last-updte">${user.lastUpdated}</p>
                   </div>
