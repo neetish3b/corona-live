@@ -4,23 +4,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <title>Document</title>
     <style>
+        #response {
+            width: 98%;
+            margin: 0 auto;
+        }
         .card {
-            width: 30%;
-            display: inline-block;
-            margin: 10px 15px;
+            margin: 5px 5px;
             border-radius: 10px;
-            background: rgba(0, 0, 0, 0.5);
             background: url('./images/COVID.jpg')no-repeat;
             background-size: 100%;
         }
 
         .color-overlay {
-            margin: 10px 15px;
-            background-color: black;
+            background: rgba(0, 0, 0, 0.75);
             color: #ffffff;
-            opacity: 0.6;
         }
 
         .heading {
@@ -37,63 +38,15 @@
             color: green;
             text-align: center;
         }
-
         button {
-            cursor: pointer;
-            position: relative;
-            padding: 2.5rem 7.5rem;
-            border-radius: 3.75rem;
-            line-height: 2.5rem;
-            font-size: 2rem;
-            font-weight: 600;
-            outline: none;
-            border: 1px solid #012880;
-            background-image: linear-gradient(-180deg, #FF89D6 0%, #C01F9E 100%);
-            box-shadow: 0 1rem 1.25rem 0 rgba(22, 75, 195, 0.50),
-                0 -0.25rem 1.5rem rgba(110, 15, 155, 1) inset,
-                0 0.75rem 0.5rem rgba(255, 255, 255, 0.4) inset,
-                0 0.25rem 0.5rem 0 rgba(180, 70, 207, 1) inset;
-        }
-
-        button span {
-            color: transparent;
-            background-image: linear-gradient(0deg, #EE82DA 0%, #FEFAFD 100%);
-            -webkit-background-clip: text;
-            background-clip: text;
-            filter: drop-shadow(0 2px 2px hsla(290, 100%, 20%, 1));
-        }
-
-        button::before {
-            content: "";
             display: block;
-            height: 0.25rem;
-            position: absolute;
-            top: 0.5rem;
-            left: 50%;
-            transform: translateX(-50%);
-            width: calc(100% - 7.5rem);
-            background: #fff;
-            border-radius: 100%;
-
-            opacity: 0.7;
-            background-image: linear-gradient(-270deg, rgba(255, 255, 255, 0.00) 0%, #FFFFFF 20%, #FFFFFF 80%, rgba(255, 255, 255, 0.00) 100%);
+            margin: 0 auto;
         }
-
-        button::after {
-            content: "";
-            display: block;
-            height: 0.25rem;
-            position: absolute;
-            bottom: 0.75rem;
-            left: 50%;
-            transform: translateX(-50%);
-            width: calc(100% - 7.5rem);
-            background: #fff;
-            border-radius: 100%;
-
-            filter: blur(1px);
-            opacity: 0.05;
-            background-image: linear-gradient(-270deg, rgba(255, 255, 255, 0.00) 0%, #FFFFFF 20%, #FFFFFF 80%, rgba(255, 255, 255, 0.00) 100%);
+        .heading5 {
+            margin-top: 20px;
+        }
+        .mt10 {
+            margin-top: 20px;
         }
     </style>
 </head>
@@ -102,11 +55,11 @@
 
     <body>
         <div>
-            <h1>कोरोना लाइव ट्रैकर</h1>
+            <h1 class="text-center mt10">कोरोना लाइव ट्रैकर</h1>
             <button id="fetchUserDataBtn">अंतिम अपडेट देखें </button>
         </div>
         <hr>
-        <div id="response"></div>
+            <div id="response"></div>
     </body>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
     <script src="d3.js"></script>
